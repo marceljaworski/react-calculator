@@ -1,6 +1,7 @@
+import './display.css'
 function Display () {
     return(
-        <div>
+        <div className='Display'>
             <span>Hello calculator display</span>
         </div>
     )

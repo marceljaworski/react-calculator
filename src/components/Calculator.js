@@ -1,8 +1,9 @@
 import Display from './Display'
 import Keypad from './Keypad'
+import './calculator.css'
 function Calcualtor () {
     return (
-        <div>
+        <div className='Calculator'>
             <Display />
             <Keypad />
         </div>
