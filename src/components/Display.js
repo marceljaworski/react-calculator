@@ -1,7 +1,7 @@
 function Display () {
     return(
         <div>
-            <span>display</span>
+            <span>Hello calculator display</span>
         </div>
     )
 }
