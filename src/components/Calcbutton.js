@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Calcbutton(props) {
+export default function Calcbutton({colorStyle, label}) {
   return (
    
-    <button clasName={props.colorStyle}>{props.label}</button>
+    <button clasName={colorStyle}>{label}</button>
     
   )
 }

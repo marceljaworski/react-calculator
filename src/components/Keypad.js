@@ -6,22 +6,23 @@ function Keypad () {
             <Calcbutton colorStyle="col-gray" label="AC"/>
             <Calcbutton colorStyle="col-gray" label="+/-"/>
             <Calcbutton colorStyle="col-gray" label="%"/>
+            <Calcbutton colorStyle="col-gray" label="/"/>
+            <Calcbutton colorStyle="col-gray" label="7"/>
+            <Calcbutton colorStyle="col-gray" label="8"/>
+            <Calcbutton colorStyle="col-gray" label="9"/>
+            <Calcbutton colorStyle="col-gray" label="*"/>
+            <Calcbutton colorStyle="col-gray" label="4"/>
+            <Calcbutton colorStyle="col-gray" label="5"/>
+            <Calcbutton colorStyle="col-gray" label="6"/>
+            <Calcbutton colorStyle="col-gray" label="-"/>
             <Calcbutton colorStyle="col-gray" label="1"/>
             <Calcbutton colorStyle="col-gray" label="2"/>
             <Calcbutton colorStyle="col-gray" label="3"/>
+            <Calcbutton colorStyle="col-gray" label="+"/>
+            <Calcbutton colorStyle="col-gray" label="0"/>
+            <Calcbutton colorStyle="col-gray" label="."/>
+            <Calcbutton colorStyle="col-gray" label="="/>
             
-         
-            <button>*</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>+</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>-</button>
-            <button>.</button>
-            <button>0</button>
             <button className="span-two">=</button>
         </div>
     )
