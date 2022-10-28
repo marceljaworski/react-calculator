@@ -1,7 +1,8 @@
 import Display from './Display'
 import Keypad from './Keypad'
 import './calculator.css'
-function Calcualtor () {
+
+function Calculator () {
     return (
         <div className='Calculator'>
             <Display />
@@ -9,4 +10,4 @@ function Calcualtor () {
         </div>
     )
 }
-export default Calcualtor;
+export default Calculator;

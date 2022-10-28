@@ -1,6 +1,7 @@
 .Calculator{
     width: clamp(200px, 30%, 600px);
     height: 400px;
+    background: black;
     border: solid 1px wheat;
     border-radius: 30px;
     display: flex;
