@@ -3,12 +3,12 @@ import './keypad.css'
 function Keypad () {
     return(
         <div className="Keypad">
-            <Calcbutton label="AC"/>
-            <Calcbutton label="+/-"/>
-            <Calcbutton label="%"/>
-            <Calcbutton label="1"/>
-            <Calcbutton label="2"/>
-            <Calcbutton label="3"/>
+            <Calcbutton colorStyle="col-gray" label="AC"/>
+            <Calcbutton colorStyle="col-gray" label="+/-"/>
+            <Calcbutton colorStyle="col-gray" label="%"/>
+            <Calcbutton colorStyle="col-gray" label="1"/>
+            <Calcbutton colorStyle="col-gray" label="2"/>
+            <Calcbutton colorStyle="col-gray" label="3"/>
             
          
             <button>*</button>
