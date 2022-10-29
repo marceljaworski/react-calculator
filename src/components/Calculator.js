@@ -4,20 +4,24 @@ import { useState } from 'react';
 
 function Calculator () {
     const [number, setNumber] = useState([])
+    const [firstNumber, setfirstNumber] = useState()
     const [operator, setOperator] = useState("")
+    
     console.log(number, operator)
     const handleOperator = (event) => {
-        setOperator({
-          ...operator,
-          [event.target.name]: event.target.value,
-        });
+        setOperator(event.target.value);
+        
+        setfirstNumber(number.join(""))
+        setNumber([])
     };
+    console.log("first " + firstNumber)
+    
     const handleNumber = (event) => {
         setNumber((number) => [ ...number, event.target.value,]);
     }
     return (
         <div className='Calculator'>
-            <Display previous={number}/>
+            <Display previous={number} oper={operator} current={firstNumber}/>
             <div className="Keypad">
                 <button onClick={handleOperator} value="AC">AC</button>
                 <button onClick={handleOperator} name= "operator" value="%">%</button>
