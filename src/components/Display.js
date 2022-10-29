@@ -1,10 +1,10 @@
 import './display.css'
-import {useState} from 'react'
-function Display () {
-    const [result, setResult] = useState(0)
+
+function Display ({previous}) {
     return(
         <div className='Display'>
-            <span>{result}</span>
+            <div className='previous'>{previous}</div>
+            {/* <div className='current'>{current}</div> */}
         </div>
     )
 }
