@@ -6,10 +6,9 @@ body {
     background: linear-gradient(to right, cyan, magenta);
     font-family: 'Lato', sans-serif;
     color: white;
-}
-.App{
+    margin-top: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 6rem;
+    
 }
