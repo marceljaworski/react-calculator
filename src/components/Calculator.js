@@ -6,24 +6,60 @@ function Calculator () {
     const [number, setNumber] = useState([])
     const [firstNumber, setfirstNumber] = useState()
     const [operator, setOperator] = useState("")
-    
-    console.log(number, operator)
+
     const handleOperator = (event) => {
         setOperator(event.target.value);
         
         setfirstNumber(number.join(""))
         setNumber([])
     };
-    console.log("first " + firstNumber)
     
     const handleNumber = (event) => {
         setNumber((number) => [ ...number, event.target.value,]);
+    }
+    const handleAC = () => {
+        setNumber([]);
+        setfirstNumber()
+        setOperator("")
+    }
+
+    const calculate = () => {
+        switch (operator) {
+            case "+":
+                setNumber([(+firstNumber + +number.join(""))])
+                setfirstNumber()
+                setOperator("")
+                break;
+            case "-":
+                setNumber([(+firstNumber - +number.join(""))])
+                setfirstNumber()
+                setOperator("")
+                break;
+            case "*":
+                setNumber([(+firstNumber * +number.join(""))])
+                setfirstNumber()
+                setOperator("")
+                break;
+            case "/":
+                setNumber([(+firstNumber / +number.join(""))])
+                setfirstNumber()
+                setOperator("")
+                break;
+            case "%":
+                setNumber([(+firstNumber % +number.join(""))])
+                setfirstNumber()
+                setOperator("")
+                break;
+            default:
+                console.log(`Sorry, we are out of`);
+
+        }
     }
     return (
         <div className='Calculator'>
             <Display previous={number} oper={operator} current={firstNumber}/>
             <div className="Keypad">
-                <button onClick={handleOperator} value="AC">AC</button>
+                <button onClick={handleAC} value="AC">AC</button>
                 <button onClick={handleOperator} name= "operator" value="%">%</button>
                 <button onClick={handleOperator} name= "operator" value="+">+</button>
                 <button onClick={handleOperator} name= "operator" value="/">/</button>
@@ -41,7 +77,7 @@ function Calculator () {
                 <button onClick={handleOperator} name= "operator" value="+">+</button>
                 <button onClick={handleNumber} name= "number" value="0">0</button>
                 <button onClick={handleOperator} value=".">.</button>
-                <button onClick={handleOperator} value="=">=</button>
+                <button onClick={calculate} value="=">=</button>
             </div>
         </div>
     )

@@ -4,8 +4,7 @@
 body {
     margin: 0;
     background: linear-gradient(to right, cyan, magenta);
-    
-    
+    font-family: 'Lato', sans-serif;
     color: white;
 }
 .App{
