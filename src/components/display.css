@@ -12,12 +12,15 @@
     font-size: xx-large;
     background-color: rgba(0, 0, 0, 0.531);
 }
+
 .previous {
-    text-align: center;
+    text-align: right;
+    margin-inline: 0.5rem;
 }
 
 .current {
     font-size: large;
-    text-align: center;
+    text-align: right;
     margin-top: 1rem;
+    margin-inline: 0.5rem;
 }

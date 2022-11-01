@@ -1,5 +1,6 @@
 .Calculator{
     height: 400px;
+    width: 16rem;
     background: rgba(0, 0, 0, 0.413);
     border-radius: 20px;
     display: flex;
@@ -20,5 +21,5 @@
 button{
     cursor: pointer;
     font-size: xx-large;
-    /* border-radius: 50%; */
+    width: 3.5rem;
 }

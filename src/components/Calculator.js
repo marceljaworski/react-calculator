@@ -3,9 +3,10 @@ import './calculator.css'
 import { useState } from 'react';
 
 function Calculator () {
-    const [number, setNumber] = useState([])
-    const [firstNumber, setfirstNumber] = useState()
+    const [number, setNumber] = useState([0])
+    const [firstNumber, setfirstNumber] = useState("")
     const [operator, setOperator] = useState("")
+    console.log(number, firstNumber)
 
     const handleOperator = (event) => {
         setOperator(event.target.value);
@@ -18,7 +19,7 @@ function Calculator () {
     }
     const handleAC = () => {
         setNumber([]);
-        setfirstNumber()
+        setfirstNumber("")
         setOperator("")
     }
     const handleMinus = () => {
@@ -34,32 +35,32 @@ function Calculator () {
         switch (operator) {
             case "+":
                 setNumber([(+firstNumber + +number.join(""))])
-                setfirstNumber()
+                setfirstNumber("")
                 setOperator("")
                 break;
             case "-":
                 setNumber([(+firstNumber - +number.join(""))])
-                setfirstNumber()
+                setfirstNumber("")
                 setOperator("")
                 break;
             case "*":
                 setNumber([(+firstNumber * +number.join(""))])
-                setfirstNumber()
+                setfirstNumber("")
                 setOperator("")
                 break;
             case "/":
                 setNumber([(+firstNumber / +number.join(""))])
-                setfirstNumber()
+                setfirstNumber("")
                 setOperator("")
                 break;
             case "%":
                 setNumber([(+firstNumber % +number.join(""))])
-                setfirstNumber()
+                setfirstNumber("")
                 setOperator("")
                 break;
            
             default:
-                console.log(`Sorry, we are out of`);
+                console.log(`please choose an operator`);
 
         }
     }
@@ -84,7 +85,7 @@ function Calculator () {
                 <button onClick={handleNumber} name= "number" value="3">3</button>
                 <button onClick={handleOperator} name= "operator" value="+">+</button>
                 <button onClick={handleNumber} name= "number" value="0">0</button>
-                <button onClick={handleOperator} value=".">.</button>
+                <button onClick={handleOperator} value=",">,</button>
                 <button onClick={calculate} value="=">=</button>
             </div>
         </div>
