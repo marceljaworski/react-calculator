@@ -9,19 +9,19 @@ function Calculator () {
     console.log(number, firstNumber)
 
     const handleOperator = (event) => {
-        setOperator(event.target.value);
+        setOperator(event.target.value)
         setfirstNumber(number.join(""))
         setNumber([])
-    };
+    }
     
     const handleNumber = (event) => {
-        if(event.target.value == "0" && number == "0"){
+        if(event.target.value === "0" && number === "0"){
             return  number;
         } 
-        if(event.target.value !== "0" && number == "0"){
+        if(event.target.value !== "0" && number === "0"){
             return setNumber([event.target.value]);
         } 
-        if(event.target.value == "." && number.includes(".")){
+        if(event.target.value === "." && number.includes(".")){
             return number;
         } 
         return setNumber((number) => [ ...number, event.target.value,]);
@@ -33,11 +33,11 @@ function Calculator () {
     }
     const handleMinus = () => {
         const result = +number.join("") * -1
-        setNumber(([]) => [ ...[], result]);
+        setNumber([result]);
     }
     const handlePorcent = () => {
         const result = +number.join("") / 100
-        setNumber(([]) => [ ...[], result]);
+        setNumber([result]);
     }
 
     const calculate = () => {
