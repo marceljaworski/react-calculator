@@ -1,26 +1,21 @@
 .Display {
     /* border: solid 1px rgba(216, 216, 216, 0.465); */
-    width: 90%;
-    height: 25%;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-    /* align-items: center; */
+    /* width: 90%;
+    height: 25%; */
     display: grid;
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 1fr;
     font-size: xx-large;
     background-color: rgba(0, 0, 0, 0.531);
+    text-align: right;
+    padding-inline: 0.5rem;
 }
 
 .previous {
-    text-align: right;
-    margin-inline: 0.5rem;
+    font-size: larger;
 }
 
 .current {
     font-size: large;
-    text-align: right;
     margin-top: 1rem;
-    margin-inline: 0.5rem;
 }

@@ -1,23 +1,27 @@
 .Calculator{
-    height: 400px;
-    width: 16rem;
+    /* height: 28rem;
+    width: 16rem; */
     background: rgba(0, 0, 0, 0.413);
-    border-radius: 20px;
-    display: flex;
+    border-radius: 5px;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0.1rem;
+    justify-content: center; */
+    /* align-items: center;
+    padding: 0.1rem; */
 }
 .Keypad{
-    width: 90%;
-    height: 60%;
-    margin-top: 1rem;
+    /* width: 90%;
+    height: 60%; */
+   
     gap: 2px;
     display: grid;
-    grid-template-columns:repeat(4, 1fr);
-    grid-template-rows: repeat(1fr 1fr 1fr 1fr);
+    grid-template-columns: repeat(4, 3.5rem);
+    grid-template-rows: repeat(5, 3.5rem);
+    
 }
+/* .equal {
+    grid-column: 1 / span 2;
+} */
 button{
     cursor: pointer;
     font-size: xx-large;

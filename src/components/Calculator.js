@@ -15,10 +15,19 @@ function Calculator () {
     };
     
     const handleNumber = (event) => {
-        setNumber((number) => [ ...number, event.target.value,]);
+        if(event.target.value == "0" && number == "0"){
+            return  number;
+        } 
+        if(event.target.value !== "0" && number == "0"){
+            return setNumber([event.target.value]);
+        } 
+        if(event.target.value == "." && number.includes(".")){
+            return number;
+        } 
+        return setNumber((number) => [ ...number, event.target.value,]);
     }
     const handleAC = () => {
-        setNumber([]);
+        setNumber(["0"]);
         setfirstNumber("")
         setOperator("")
     }
@@ -85,8 +94,8 @@ function Calculator () {
                 <button onClick={handleNumber} name= "number" value="3">3</button>
                 <button onClick={handleOperator} name= "operator" value="+">+</button>
                 <button onClick={handleNumber} name= "number" value="0">0</button>
-                <button onClick={handleOperator} value=",">,</button>
-                <button onClick={calculate} value="=">=</button>
+                <button onClick={handleNumber} value=".">.</button>
+                <button onClick={calculate} className="equal" value="=">=</button>
             </div>
         </div>
     )
