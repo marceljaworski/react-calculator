@@ -15,10 +15,11 @@ function Calculator () {
     }
     
     const handleNumber = (event) => {
-        if(event.target.value === "0" && number === "0"){
+        console.log(event.target.value)
+        if(+event.target.value === 0 && +number === 0){
             return  number;
         } 
-        if(event.target.value !== "0" && number === "0"){
+        if(+event.target.value !== 0 && +number === 0){
             return setNumber([event.target.value]);
         } 
         if(event.target.value === "." && number.includes(".")){
