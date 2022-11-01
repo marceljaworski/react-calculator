@@ -2,17 +2,22 @@
     /* border: solid 1px rgba(216, 216, 216, 0.465); */
     width: 90%;
     height: 25%;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: larger;
+    justify-content: center; */
+    /* align-items: center; */
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr;
+    font-size: xx-large;
     background-color: rgba(0, 0, 0, 0.531);
 }
 .previous {
-    line-height: 0px;
+    text-align: center;
 }
 
 .current {
-    line-height: 50px;
+    font-size: large;
+    text-align: center;
+    margin-top: 1rem;
 }

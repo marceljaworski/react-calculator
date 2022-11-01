@@ -9,7 +9,6 @@ function Calculator () {
 
     const handleOperator = (event) => {
         setOperator(event.target.value);
-        
         setfirstNumber(number.join(""))
         setNumber([])
     };
@@ -21,6 +20,14 @@ function Calculator () {
         setNumber([]);
         setfirstNumber()
         setOperator("")
+    }
+    const handleMinus = () => {
+        const result = +number.join("") * -1
+        setNumber(([]) => [ ...[], result]);
+    }
+    const handlePorcent = () => {
+        const result = +number.join("") / 100
+        setNumber(([]) => [ ...[], result]);
     }
 
     const calculate = () => {
@@ -50,6 +57,7 @@ function Calculator () {
                 setfirstNumber()
                 setOperator("")
                 break;
+           
             default:
                 console.log(`Sorry, we are out of`);
 
@@ -59,9 +67,9 @@ function Calculator () {
         <div className='Calculator'>
             <Display previous={number} oper={operator} current={firstNumber}/>
             <div className="Keypad">
-                <button onClick={handleAC} value="AC">AC</button>
-                <button onClick={handleOperator} name= "operator" value="%">%</button>
-                <button onClick={handleOperator} name= "operator" value="+">+</button>
+                <button onClick={handleAC} value="AC">C</button>
+                <button onClick={handleMinus} name= "operator" value="+/-">+/-</button>
+                <button onClick={handlePorcent} name= "operator" value="%">%</button>
                 <button onClick={handleOperator} name= "operator" value="/">/</button>
                 <button onClick={handleNumber} name= "number" value="7">7</button>
                 <button onClick={handleNumber} name= "number" value="8">8</button>
