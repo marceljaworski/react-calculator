@@ -7,5 +7,5 @@ export default function App() {
         <div className='App'>
             <Calculator />
         </div>
-    )
+    );
 }
