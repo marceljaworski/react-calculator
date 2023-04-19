@@ -40,7 +40,6 @@ function Calculator () {
         const result = +number.join("") / 100
         setNumber([result]);
     }
-
     const calculate = () => {
         switch (operator) {
             case "+":
